@@ -2,9 +2,12 @@
 //Owen Holloway 2016
 //@Zeryter
 ?>
+<?php
+include $_SERVER['DOCUMENT_ROOT']."/core/settings.php";
+?>
 <!--Navigation-->
 <nav class="scarf" role="navigation">
-    <div class="nav-wrapper container grey darken-3"><a id="logo-container" class="brand-logo">Group Name</a>
+    <div class="nav-wrapper container grey darken-3"><a id="logo-container" class="brand-logo"><?php echo getSetting("group_name");?></a>
         <!--NAV Bar START-->
         <ul class="right hide-on-med-and-down">
             <li><a href="/">Home</a></li>

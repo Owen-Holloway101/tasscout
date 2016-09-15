@@ -1,2 +1,2 @@
-rm -Rf ../webroot/*
+#rm -Rf ../webroot/*
 cp -R ./** ../webroot
