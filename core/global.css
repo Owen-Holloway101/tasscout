@@ -1,0 +1,33 @@
+.padded {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/*Sectional colours from the brand manual*/
+.joey-brown {
+	background-color: #B86125;
+}
+
+.cub-yellow {
+	background-color: #FFC72C;
+}
+
+.scout-green {
+	background-color: #00B140;
+}
+
+.venturer-maroon {
+	background-color: #9D2235;
+}
+
+.rover-red {
+	background-color: #DA291C;
+}
+
+.watermark {
+    opacity: 0.5;
+    color: BLACK;
+    position: fixed;
+    bottom: 10px;
+    left: 80%;
+}

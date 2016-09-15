@@ -1,0 +1,23 @@
+body {
+    background-image: url("/assets/dam.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+footer {
+            background-color: #333;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+}
+
+
+.scarf {
+    background-image: url("/assets/scarf.png");
+}
+
+.nav-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+}
