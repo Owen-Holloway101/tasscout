@@ -4,7 +4,7 @@
 ?>
 <!--Navigation-->
 <nav class="scarf" role="navigation">
-    <div class="nav-wrapper container grey darken-3"><a id="logo-container" class="brand-logo">Tas Scouts</a>
+    <div class="nav-wrapper container grey darken-3"><a id="logo-container" class="brand-logo">Group Name</a>
         <!--NAV Bar START-->
         <ul class="right hide-on-med-and-down">
             <li><a href="/">Home</a></li>

@@ -13,5 +13,15 @@ include $_SERVER['DOCUMENT_ROOT']."/core/nav.php";
 
 ?>
 <script>
+//Remove the grey background and change it to section colour
+$(".nav-wrapper").removeClass("darken-3");
+$(".nav-wrapper").removeClass("grey");
+$(".nav-wrapper").addClass("cub-yellow");
+
+<?php
+if(!isMobile()) {
+	echo "$(\"#logo-container\").append(\" - Cubs\");";
+}
+?>
 </script>
 </body>

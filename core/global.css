@@ -21,7 +21,7 @@
 }
 
 .rover-red {
-	background-color: #DA291C;
+	background-color: #da291c;
 }
 
 .watermark {
@@ -29,5 +29,6 @@
     color: BLACK;
     position: fixed;
     bottom: 10px;
-    left: 80%;
+    left: 10px;
+	font-size: 250%;
 }
