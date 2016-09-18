@@ -15,9 +15,34 @@ function edit() {
 	file_picker_types: 'file image media',
 	images_upload_base_path: '/assets/uploads/',
 	content_css: [
-		'//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i',
+		'//fonts.googleapis.com/css?family=Roboto',
 		'//www.tinymce.com/css/codepen.min.css'
 	]
 	});
+
+	$(".editbutton").text("Update");
+	$(".editbutton").attr("onclick","updateContent(pagename)");
+
  }
+
+ function dummy() {
+
+ }
+
+ function updateContent(pageName) {
+            var url = "/core/contentupdate.php"; // the script where you handle the form input.
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {
+					'page': pageName,
+					'content': tinyMCE.activeEditor.getContent({format : 'raw'}) 
+				},
+                success: function(data) {
+                    location.reload();
+                }
+            });
+
+            return false; // avoid to execute the actual submit of the form.
+        }
  </script>
