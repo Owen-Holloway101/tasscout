@@ -16,6 +16,7 @@ include $_SERVER['DOCUMENT_ROOT']."/core/settings.php";
             include $_SERVER["DOCUMENT_ROOT"]."/core/dropdown.php";
             ?>
             <li><a class="dropdown-button" href="#!" data-activates="sections">Sections<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="/settings/">Settings</a></li>
         </ul>
         <!--NAV Bar END-->
         <!--Mobile NAV START-->
@@ -25,6 +26,7 @@ include $_SERVER['DOCUMENT_ROOT']."/core/settings.php";
             include $_SERVER["DOCUMENT_ROOT"]."/core/links.php";
             include $_SERVER["DOCUMENT_ROOT"]."/core/dropdown_mobile.php";
             ?>
+            <li><a href="/settings/">Settings</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>
