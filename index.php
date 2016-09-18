@@ -24,7 +24,7 @@ include $_SERVER['DOCUMENT_ROOT']."/core/pagecontent.php";
 		echo getContent("index");
 		?>
 		</div>
-		<a onclick="edit();" class="waves-effect waves-light btn editbutton">Edit</a>
+		<!--<a onclick="edit();" class="waves-effect waves-light btn editbutton">Edit</a>-->
 	</div>
 </div>
 
