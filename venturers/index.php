@@ -25,19 +25,27 @@ $(".nav-wrapper").addClass("venturer-maroon");
 <?php
 if(!isMobile()) {
 	echo "$(\"#logo-container\").append(\" - Venturers\");";
+} else {
+	echo "$(\"#logo-container\").text(\"Venturers\");";
 }
 ?>
 
 </script>
 
-<div class="section white">
-	<div class="row container">
-		<div class="editable">
-		<?php
-		echo getContent("venturers");
-		?>
+<div class="row">
+    <div class="col m8 offset-m2">
+        <div class="card">
+			<div class="card-content">
+				<div class="editable">
+				<?php
+				echo getContent("venturer");
+				?>
+				</div>
+			</div>
+			<div class="card-action">
+				<a onclick="edit();" class="editbutton">Edit</a>
+        	</div>
 		</div>
-		<a onclick="edit();" class="waves-effect waves-light btn editbutton">Edit</a>
 	</div>
 </div>
 

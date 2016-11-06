@@ -25,18 +25,26 @@ $(".nav-wrapper").addClass("cub-yellow");
 <?php
 if(!isMobile()) {
 	echo "$(\"#logo-container\").append(\" - Cubs\");";
+} else {
+	echo "$(\"#logo-container\").text(\"Cubs\");";
 }
 ?>
 </script>
 
-<div class="section white">
-	<div class="row container">
-		<div class="editable">
-		<?php
-		echo getContent("cubs");
-		?>
+<div class="row">
+    <div class="col m8 offset-m2">
+        <div class="card">
+			<div class="card-content">
+				<div class="editable">
+				<?php
+				echo getContent("cubs");
+				?>
+				</div>
+			</div>
+			<div class="card-action">
+				<a onclick="edit();" class="editbutton">Edit</a>
+        	</div>
 		</div>
-		<a onclick="edit();" class="waves-effect waves-light btn editbutton">Edit</a>
 	</div>
 </div>
 </body>

@@ -9,17 +9,18 @@
 
 <link rel="stylesheet" type="text/css" href="/core/global.css"/>
 
+
 <!-- Compiled and minified CSS -->
-<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css" media="screen,projection">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
 <!--Text Editor-->
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 
 <!--Let browser know website is optimized for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 
 <!--Meterial Icons-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -48,15 +49,7 @@ if (isMobile()) {
 //Enable parallax
 $(document).ready(function(){
     $('.parallax').parallax();
+    $('.modal').modal();
+    $(".button-collapse").sideNav();
 });
-            
-$(document).ready(function() {
-    $('select').material_select();
-});  
-
-//Enable modals
-$(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
-}); 
 </script>

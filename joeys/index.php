@@ -25,19 +25,27 @@ $(".nav-wrapper").addClass("joey-brown");
 <?php
 if(!isMobile()) {
 	echo "$(\"#logo-container\").append(\" - Joeys\");";
+} else {
+	echo "$(\"#logo-container\").text(\"Joeys\");";
 }
 ?>
 
 </script>
 
-<div class="section white">
-	<div class="row container">
-		<div class="editable">
-		<?php
-		echo getContent("joeys");
-		?>
+<div class="row">
+    <div class="col m8 offset-m2">
+        <div class="card">
+			<div class="card-content">
+				<div class="editable">
+				<?php
+				echo getContent("joeys");
+				?>
+				</div>
+			</div>
+			<div class="card-action">
+				<a onclick="edit();" class="editbutton">Edit</a>
+        	</div>
 		</div>
-		<a onclick="edit();" class="waves-effect waves-light btn editbutton">Edit</a>
 	</div>
 </div>
 

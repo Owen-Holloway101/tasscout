@@ -25,19 +25,27 @@ $(".nav-wrapper").addClass("scout-green");
 <?php
 if(!isMobile()) {
 	echo "$(\"#logo-container\").append(\" - Scouts\");";
+} else {
+	echo "$(\"#logo-container\").text(\"Scouts\");";
 }
 ?>
 
 </script>
 
-<div class="section white">
-	<div class="row container">
-		<div class="editable">
-		<?php
-		echo getContent("scouts");
-		?>
+<div class="row">
+    <div class="col m8 offset-m2">
+        <div class="card">
+			<div class="card-content">
+				<div class="editable">
+				<?php
+				echo getContent("scouts");
+				?>
+				</div>
+			</div>
+			<div class="card-action">
+				<a onclick="edit();" class="editbutton">Edit</a>
+        	</div>
 		</div>
-		<a onclick="edit();" class="waves-effect waves-light btn editbutton">Edit</a>
 	</div>
 </div>
 

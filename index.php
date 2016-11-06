@@ -17,14 +17,20 @@ include $_SERVER['DOCUMENT_ROOT']."/core/scripts.php";
 include $_SERVER['DOCUMENT_ROOT']."/core/pagecontent.php";
 ?>
 
-<div class="section white">
-	<div class="row container">
-		<div class="editable">
-		<?php
-		echo getContent("index");
-		?>
+<div class="row">
+    <div class="col m8 offset-m2">
+        <div class="card">
+			<div class="card-content">
+				<div class="editable">
+				<?php
+				echo getContent("index");
+				?>
+				</div>
+			</div>
+			<div class="card-action">
+				<a onclick="edit();" class="editbutton">Edit</a>
+        	</div>
 		</div>
-		<a onclick="edit();" class="waves-effect waves-light btn editbutton">Edit</a>
 	</div>
 </div>
 
