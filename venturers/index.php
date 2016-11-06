@@ -38,7 +38,7 @@ if(!isMobile()) {
 			<div class="card-content">
 				<div class="editable">
 				<?php
-				echo getContent("venturer");
+				echo getContent("venturers");
 				?>
 				</div>
 			</div>
