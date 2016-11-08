@@ -1,3 +1,7 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
+?>
+
 <script>
 function edit() {
 	tinymce.init({
@@ -21,24 +25,53 @@ function edit() {
 
  }
 
+function login() {
+	savePageCookie();
+	window.location = "/core/frontend/return.php"
+}
+
+function savePageCookie() {
+	days = 1;
+	date = new Date();
+    date.setTime(date.getTime()+(days*24*60*60*1000));
+    expires = "; expires="+date.toGMTString();
+	document.cookie = "lastpage"+"="+pagename+expires+"; path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+}
+
 function dummy() {
 
 }
 
  function updateContent(pageName) {
-            var url = "/core/backend/contentupdate.php"; // the script where you handle the form input.
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: {
-					'page': pageName,
-					'content': tinyMCE.activeEditor.getContent({format : 'raw'}) 
-				},
-                success: function(data) {
-                    location.reload();
-                }
-            });
-
-            return false; // avoid to execute the actual submit of the form.
+    savePageCookie();
+    var url = "/core/backend/contentupdate.php"; // the script where you handle the form input.
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {
+			'page': pageName,
+			'content': tinyMCE.activeEditor.getContent({format : 'raw'}) 
+		},
+        success: function(data) {
+            location.reload();
         }
- </script>
+    });
+
+    return false; // avoid to execute the actual submit of the form.
+}        
+</script>

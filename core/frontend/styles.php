@@ -3,9 +3,8 @@
 //@Zeryter
 ?>
 <!--Love me some good jquery-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
-<script type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script async type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script> 
 
 <link rel="stylesheet" type="text/css" href="/core/frontend/global.css"/>
 
@@ -51,5 +50,77 @@ $(document).ready(function(){
     $('.parallax').parallax();
     $('.modal').modal();
     $(".button-collapse").sideNav();
+    checkMessage();
 });
+
+function checkMessage() {
+    var messageCookie = getCookie("message");
+
+    if (messageCookie == "") {
+        // do cookie doesn't exist stuff;
+    }
+    else {
+        $('#messagemodal').modal('open');
+        days = 100;
+        date = new Date();
+        date.setTime(date.getTime()-(days*24*60*60*1000));
+        expires = "; expires="+date.toGMTString();
+        document.cookie = "message_title"+"="+pagename+expires+"; path=/";
+        document.cookie = "message"+"="+pagename+expires+"; path=/";
+    }
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+}
+
 </script>
+
+<!--Login Modal-->
+<div id="messagemodal" class="modal">
+    <div class="modal-content">
+        <h4><script>document.write(getCookie("message_title"));</script></h4>
+        <p><script>document.write(getCookie("message"));</script></p>
+    </div>
+    <div class="modal-footer">
+        <a onclick="$('#messagemodal').modal('close');" class=" modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+    </div>
+</div>
+
+<!--Login Modal-->
+<div id="loginmodal" class="modal">
+    
+    <div class="modal-content">
+        <h4>Login</h4>
+        </br>
+        <form class="col">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="user_name" type="text" class="validate">
+                    <label for="user_name">Username</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a onclick="$('#loginmodal').modal('close');" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        <a onclick="login()" class=" modal-action modal-close waves-effect waves-green btn-flat">Login</a>
+    </div>
+</div>
