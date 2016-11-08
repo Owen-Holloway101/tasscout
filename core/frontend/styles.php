@@ -1,12 +1,63 @@
 <?php
 //Owen Holloway 2016
 //@Zeryter
+
+function displayBackground()
+{
+    $exact_dir = "/assets/background/";
+	$dir = $_SERVER['DOCUMENT_ROOT'].$exact_dir;
+	$cnt = 0;
+	$bgArray= array();
+		
+	/*if we can load the directory*/
+	if ($handle = opendir($dir)) {
+		
+		/* Loop through the directory here */
+		while (false !== ($entry = readdir($handle))) {
+		
+            $pathToFile = $dir.$entry;
+            if(is_file($pathToFile)) //if the files exists 
+            {	
+                
+                //make sure the file is an image...there might be a better way to do this
+                if(getimagesize($pathToFile)!=FALSE)
+                {
+                    //add it to the array
+                    $bgArray[$cnt]= $pathToFile;
+                    $cnt = $cnt+1;
+                
+                }
+                
+            }	
+            
+        }	
+	//create a random number, then use the image whos key matches the number
+	$myRand = rand(0,($cnt-1));	
+	$val = str_replace($dir,$exact_dir,$bgArray[$myRand]);
+	
+    }
+    closedir($handle);
+    echo('"'.$val.'"');
+    
+}
+
 ?>
 <!--Love me some good jquery-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script async type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script> 
 
 <link rel="stylesheet" type="text/css" href="/core/frontend/global.css"/>
+
+<style>
+	body
+	{
+	background: url(<?php displayBackground();?>) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	}
+</style>
 
 
 <!-- Compiled and minified CSS -->
