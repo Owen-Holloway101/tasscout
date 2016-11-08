@@ -18,7 +18,7 @@ include $_SERVER['DOCUMENT_ROOT']."/core/backend/pagecontent.php";
 ?>
 
 <div class="row">
-    <div class="col l8 push-l2">
+    <div class="col s12 l8 push-l2">
         <div class="card">
 			<div class="card-content">
 				<div class="editable">

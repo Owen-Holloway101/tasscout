@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']."/core/backend/links.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 /*
 destroy a session (security etc)

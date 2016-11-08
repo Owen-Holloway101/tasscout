@@ -118,7 +118,7 @@ function checkSalt($user, $pass) {
 	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 	//This is only needed for php <5.5
-	require $_SERVER['DOCUMENT_ROOT'].'/core/password_compat/lib/password.php';
+	require $_SERVER['DOCUMENT_ROOT'].'/core/lib/password_compat.php';
 	
 
 	$sPassFound = False;
@@ -170,7 +170,7 @@ function insertNewUser($user, $pass) {
 	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 	//This is only needed for php <5.5
-	require $_SERVER['DOCUMENT_ROOT'].'/core/password_compat/lib/password.php';
+	require $_SERVER['DOCUMENT_ROOT'].'/core/lib/password_compat.php';
 
 	$options = array('cost' => 11);
 	$passHash = password_hash($pass, PASSWORD_BCRYPT, $options);
@@ -195,7 +195,7 @@ function updateUserPass($user, $pass) {
 	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 	//This is only needed for php <5.5
-	require $_SERVER['DOCUMENT_ROOT'].'/core/password_compat/lib/password.php';
+	require $_SERVER['DOCUMENT_ROOT'].'/core/lib/password_compat.php';
 
 	$options = array('cost' => 11);
 	$passHash = password_hash($pass, PASSWORD_BCRYPT, $options);
