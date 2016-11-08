@@ -31,10 +31,6 @@ include $_SERVER['DOCUMENT_ROOT']."/core/backend/pagecontent.php";
 				<a onclick="edit();" class="editbutton">Edit</a>
         	</div>
 		</div>
-<<<<<<< HEAD
-=======
-		<!--<a onclick="edit();" class="waves-effect waves-light btn editbutton">Edit</a>-->
->>>>>>> 8baa3e367fab66e505b3ba0353f08af630099579
 	</div>
 </div>
 
