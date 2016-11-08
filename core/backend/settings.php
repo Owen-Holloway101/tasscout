@@ -30,4 +30,24 @@ function getSetting($setting) {
 	return $settingreturn;	
 	}
 }
+
+/*
+Update a setting inserting some html into the database
+*/
+
+function updateSetting($setting, $value) {
+
+	//This inserts a new user into the system with the pass $pass, it also salts the password
+	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+
+
+	$stmt = $db->prepare("UPDATE settings SET ".$setting."=?");
+	echo $db->error;
+	$stmt->bind_param("is",$value,$setting);
+	
+	$stmt->execute();
+
+	$stmt->close();
+
+}
 ?>

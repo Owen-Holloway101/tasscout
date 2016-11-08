@@ -29,10 +29,12 @@ a {
 }
 
 .watermark {
-    opacity: 0.75;
+	z-index: 100;
+    opacity: 0.25;
     color: BLACK;
     position: fixed;
     bottom: 10px;
-    left: 10px;
+	right: 10px;
 	font-size: 250%;
+	text-align: right;
 }
