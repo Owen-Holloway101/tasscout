@@ -5,7 +5,7 @@ Gets the session ID (from cookie) and checks it against the database for a usern
 
 function getSetting($setting) {
 
-	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 	$query = "SELECT ".$setting." FROM settings";
 

@@ -28,4 +28,3 @@ if (getSetting("rovers")) {
 <li class=\"divider\"></li>";
 }
 ?>
-</ul>

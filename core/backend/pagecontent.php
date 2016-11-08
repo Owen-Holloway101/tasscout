@@ -6,7 +6,7 @@ Gets some content from the database for a specific page
 
 function getContent($pageName) {
 
-	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 	$query = "SELECT page, content FROM pagecontent";
 
@@ -41,7 +41,7 @@ Update a pages content inserting some html into the database
 function updateContent($pageName, $content) {
 
 	//This inserts a new user into the system with the pass $pass, it also salts the password
-	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 
 	$stmt = $db->prepare("UPDATE pagecontent SET content=? WHERE page=?");

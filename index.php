@@ -11,14 +11,14 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 var pagename = 'index'
 </script>
 <?php 
-include $_SERVER['DOCUMENT_ROOT']."/core/styles.php";
-include $_SERVER['DOCUMENT_ROOT']."/core/nav.php";
-include $_SERVER['DOCUMENT_ROOT']."/core/scripts.php";
-include $_SERVER['DOCUMENT_ROOT']."/core/pagecontent.php";
+include $_SERVER['DOCUMENT_ROOT']."/core/frontend/styles.php";
+include $_SERVER['DOCUMENT_ROOT']."/core/frontend/nav.php";
+include $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
+include $_SERVER['DOCUMENT_ROOT']."/core/backend/pagecontent.php";
 ?>
 
 <div class="row">
-    <div class="col m8 offset-m2">
+    <div class="col l8 push-l2">
         <div class="card">
 			<div class="card-content">
 				<div class="editable">

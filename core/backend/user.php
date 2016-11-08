@@ -8,7 +8,7 @@ Gets the session ID (from cookie) and checks it against the database for a usern
 
 function getUserName($sessionID) {
 
-	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 	$query = "SELECT ID, USER FROM SESSION";
 
@@ -42,7 +42,7 @@ Checks the logged in users permission level and logs them in
 
 function getUserPermission($user) {
 
-	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 	$userPermission = 0;
 
@@ -80,7 +80,7 @@ function userExists($user) {
 	//This is a check for if the user exists, 
 	//we don't want 2 users getting inserted with the same name, and is an easy first stage check for login
 
-	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 	$userExists = False;
 
@@ -115,7 +115,7 @@ If the salt is correct the user has provided the correct password
 function checkSalt($user, $pass) {
 
 	//This checks if the user has provided the correct passwor
-	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 	//This is only needed for php <5.5
 	require $_SERVER['DOCUMENT_ROOT'].'/core/password_compat/lib/password.php';
@@ -167,7 +167,7 @@ Inserts a new user into the DB complete with hashed password
 function insertNewUser($user, $pass) {
 
 	//This inserts a new user into the system with the pass $pass, it also salts the password
-	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 	//This is only needed for php <5.5
 	require $_SERVER['DOCUMENT_ROOT'].'/core/password_compat/lib/password.php';
@@ -192,7 +192,7 @@ changes a users password
 function updateUserPass($user, $pass) {
 
 	//This inserts a new user into the system with the pass $pass, it also salts the password
-	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 	//This is only needed for php <5.5
 	require $_SERVER['DOCUMENT_ROOT'].'/core/password_compat/lib/password.php';

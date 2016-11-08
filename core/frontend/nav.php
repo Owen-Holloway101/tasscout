@@ -3,7 +3,7 @@
 //@Zeryter
 ?>
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/core/settings.php";
+include $_SERVER['DOCUMENT_ROOT']."/core/backend/settings.php";
 ?>
 <!--Navigation-->
 <nav class="scarf" role="navigation">
@@ -12,19 +12,21 @@ include $_SERVER['DOCUMENT_ROOT']."/core/settings.php";
         <ul class="right hide-on-med-and-down">
             <li><a href="/">Home</a></li>
             <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/core/links.php";
-            include $_SERVER["DOCUMENT_ROOT"]."/core/dropdown.php";
+            include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/links.php";
+            include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/dropdown.php";
             ?>
             <li><a class="dropdown-button" href="#!" data-activates="sections">Sections<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="#">Login</a></li>
         </ul>
         <!--NAV Bar END-->
         <!--Mobile NAV START-->
         <ul id="nav-mobile" class="side-nav">
             <li><a href="/">Home</a></li>
             <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/core/links.php";
-            include $_SERVER["DOCUMENT_ROOT"]."/core/dropdown_mobile.php";
+            include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/links.php";
+            include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/dropdown_mobile.php";
             ?>
+            <li><a href="#">Login</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>

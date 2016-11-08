@@ -7,7 +7,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
 <script type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script> 
 
-<link rel="stylesheet" type="text/css" href="/core/global.css"/>
+<link rel="stylesheet" type="text/css" href="/core/frontend/global.css"/>
 
 
 <!-- Compiled and minified CSS -->
@@ -29,7 +29,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <?php
 function isMobile() {
-    require_once $_SERVER['DOCUMENT_ROOT'].'/core/mobile-detect.php';
+    require_once $_SERVER['DOCUMENT_ROOT'].'/core/lib/mobile-detect.php';
     $detect = new Mobile_Detect;
     if ($detect->isMobile()) {
         return true;
@@ -39,9 +39,9 @@ function isMobile() {
 }
 	
 if (isMobile()) {
-    echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/core/mobile.css\"/>";
+    echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/core/frontend/mobile.css\"/>";
 } else {
-    echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/core/desktop.css\"/>";
+    echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/core/frontend/desktop.css\"/>";
 }
 
 ?>

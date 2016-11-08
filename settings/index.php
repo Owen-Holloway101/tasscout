@@ -8,9 +8,9 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 ?>
 <body>
 <?php 
-include $_SERVER['DOCUMENT_ROOT']."/core/styles.php";
-include $_SERVER['DOCUMENT_ROOT']."/core/nav.php";
-include $_SERVER['DOCUMENT_ROOT']."/core/scripts.php";
+include $_SERVER['DOCUMENT_ROOT']."/core/frontend/styles.php";
+include $_SERVER['DOCUMENT_ROOT']."/core/frontend/nav.php";
+include $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 ?>
 <script>
 <?php

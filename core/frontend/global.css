@@ -1,11 +1,14 @@
 body {
 	background-image: url("/assets/background.jpg");
-	background-size: 100%;
 }
 
 .padded {
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+a {
+	cursor: pointer;
 }
 
 /*Sectional colours from the brand manual*/
@@ -30,7 +33,7 @@ body {
 }
 
 .watermark {
-    opacity: 0.5;
+    opacity: 0.75;
     color: BLACK;
     position: fixed;
     bottom: 10px;

@@ -26,7 +26,7 @@ function dummy() {
 }
 
  function updateContent(pageName) {
-            var url = "/core/contentupdate.php"; // the script where you handle the form input.
+            var url = "/core/backend/contentupdate.php"; // the script where you handle the form input.
             $.ajax({
                 type: "POST",
                 url: url,

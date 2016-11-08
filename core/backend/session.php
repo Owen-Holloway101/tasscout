@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']."/core/user.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/core/backend/links.php";
 
 /*
 destroy a session (security etc)
@@ -8,7 +8,7 @@ destroy a session (security etc)
 function deleteSession($sessionID) {
 
 	//Prepared statements make sure that we don't fail and have sql injection ...
-	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 	
 	$stmt = $db->prepare("DELETE FROM `SESSION` WHERE ID=?");
 
@@ -26,7 +26,7 @@ A user needs a session to be able to use the site
 
 function setSession($user, $sessionID) {
 
-	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 	//Prepared statements make sure that we don't fail and have sql injection ...
 	$stmt = $db->prepare("INSERT INTO `SESSION` (USER, ID) VALUES (?,?)");
