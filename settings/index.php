@@ -39,29 +39,33 @@ function settingload() {
 	?>
 }
 </script>
-<div class="section white">
-	<div class="row container">
-	<h5>Available Sections</h5>
-	<p>
-      <input type="checkbox" id="Joeys" />
-      <label for="Joeys">Joeys</label>
-    </p>
-	<p>
-      <input type="checkbox" id="Cubs" />
-      <label for="Cubs">Cubs</label>
-    </p>
-	<p>
-      <input type="checkbox" id="Scouts" />
-      <label for="Scouts">Scouts</label>
-    </p>
-	<p>
-      <input type="checkbox" id="Venturers" />
-      <label for="Venturers">Venturers</label>
-    </p>
-	<p>
-      <input type="checkbox" id="Rovers" />
-      <label for="Rovers">Rovers</label>
-    </p>
+<div class="row">
+    <div class="col s12 l8 push-l2">
+        <div class="card">
+			<div class="card-content">
+				<h5>Available Sections</h5>
+				<p>
+				<input type="checkbox" id="Joeys" />
+				<label for="Joeys">Joeys</label>
+				</p>
+				<p>
+				<input type="checkbox" id="Cubs" />
+				<label for="Cubs">Cubs</label>
+				</p>
+				<p>
+				<input type="checkbox" id="Scouts" />
+				<label for="Scouts">Scouts</label>
+				</p>
+				<p>
+				<input type="checkbox" id="Venturers" />
+				<label for="Venturers">Venturers</label>
+				</p>
+				<p>
+				<input type="checkbox" id="Rovers" />
+				<label for="Rovers">Rovers</label>
+				</p>
+			</div>
+		</div>
 	</div>
 </div>
 </body>

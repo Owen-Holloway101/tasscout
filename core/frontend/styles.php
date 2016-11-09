@@ -149,13 +149,21 @@ function getCookie(cname) {
     </div>
 </div>
 
+<script>
+    function handle(e){
+        if(e.keyCode === 13){
+            e.preventDefault();
+            $('#login').submit();
+        }
+    }
+</script>
+
 <!--Login Modal-->
 <div id="loginmodal" class="modal">
-    
     <div class="modal-content">
         <h4>Login</h4>
         </br>
-        <form action="/core/user/login.php" id="login" method="post" class="col">
+        <form action="/core/user/login.php" onkeypress="handle(event)" id="login" method="post" class="col">
             <div class="row">
                 <div class="input-field col s12">
                     <input id="user_name" name="user_name" type="text" class="validate">

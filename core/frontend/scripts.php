@@ -1,7 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
 
-
 function message_return($title,$message) {
     setcookie("message_title",$title,time()+36000,"/");
 	setcookie("message",$message,time()+36000,"/");
@@ -12,6 +11,11 @@ function message_return($title,$message) {
 ?>
 
 <script>
+<?php
+echo "var userName = \"".$userName."\";\n";
+echo "var userPermission = \"".$userPermission."\";\n";
+?>
+
 function edit() {
 	tinymce.init({
 	selector: '.editable',

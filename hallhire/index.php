@@ -7,15 +7,18 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 }
 ?>
 <body>
-<script>
-var pagename = 'hallhire'
-</script>
 <?php 
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/styles.php";
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/nav.php";
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 include $_SERVER['DOCUMENT_ROOT']."/core/backend/pagecontent.php";
 ?>
+
+<script>
+var pagename = 'hallhire';
+savePageCookie();
+</script>
+
 <script>
 <?php
 if(!isMobile()) {
@@ -37,9 +40,12 @@ if(!isMobile()) {
 				?>
 				</div>
 			</div>
-			<div class="card-action">
-				<a onclick="edit();" class="editbutton">Edit</a>
-        	</div>
+			<?php if ($userPermission >= 50) {
+				echo "<div class=\"card-action\">
+				<a onclick=\"edit();\" class=\"editbutton\">Edit</a>
+        	</div>";
+			}
+			?>
 		</div>
 	</div>
 </div>

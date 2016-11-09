@@ -73,12 +73,4 @@ if (isset($_COOKIE['session'])) {
 	$userName = "null";
 	$userPermission = 0;
 }
-/*
-echo "<script>
-	var userName = ".$userName."
-	</script>";
-echo "<script>
-	var userPermission = ".$userPermission."
-	</script>";
-	*/
 ?>

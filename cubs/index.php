@@ -7,15 +7,18 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 }
 ?>
 <body>
-<script>
-var pagename = 'cubs'
-</script>
 <?php 
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/styles.php";
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/nav.php";
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 include $_SERVER['DOCUMENT_ROOT']."/core/backend/pagecontent.php";
 ?>
+
+<script>
+var pagename = 'cubs';
+savePageCookie();
+</script>
+
 <script>
 //Remove the grey background and change it to section colour
 $(".nav-wrapper").removeClass("darken-3");
@@ -41,9 +44,12 @@ if(!isMobile()) {
 				?>
 				</div>
 			</div>
-			<div class="card-action">
-				<a onclick="edit();" class="editbutton">Edit</a>
-        	</div>
+			<?php if ($userPermission >= 50) {
+				echo "<div class=\"card-action\">
+				<a onclick=\"edit();\" class=\"editbutton\">Edit</a>
+        	</div>";
+			}
+			?>
 		</div>
 	</div>
 </div>

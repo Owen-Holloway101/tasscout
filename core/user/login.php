@@ -7,10 +7,10 @@ if (!isset($_COOKIE["session"])) {
 			setSession($_POST['user_name'], generateSessionID());
 			message_return("Success","Logged in as ".$_POST['user_name']);
 		} else {
-			message_return("Error","user does not exist or pass incorrect 1");
+			message_return("Error","user does not exist or pass incorrect");
 		}
 	} else {
-		message_return("Error","user does not exist or pass incorrect 2");
+		message_return("Error","user does not exist or pass incorrect");
 	}
 } else {
 	message_return("Error","already logged in as ". $userName);

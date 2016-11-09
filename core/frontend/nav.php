@@ -1,10 +1,12 @@
 <?php
 //Owen Holloway 2016
 //@Zeryter
-?>
-<?php
 include $_SERVER['DOCUMENT_ROOT']."/core/backend/settings.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
 ?>
+<head>
+<title><?php echo getSetting("group_name");?></title>
+</head>
 <!--Navigation-->
 <nav class="scarf" role="navigation">
     <div class="nav-wrapper container grey darken-3"><a id="logo-container" class="brand-logo"><?php echo getSetting("group_name");?></a>
@@ -16,7 +18,14 @@ include $_SERVER['DOCUMENT_ROOT']."/core/backend/settings.php";
             include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/dropdown.php";
             ?>
             <li><a class="dropdown-button" href="#!" data-activates="sections">Sections<i class="material-icons right">arrow_drop_down</i></a></li>
-            <li><a href="#loginmodal">Login</a></li>
+            <?php
+            if ($userPermission > 0) {
+                echo "<li><a href=\"/core/user/logout.php\">Logout ".$userName."</a></li>";
+            } else {
+                echo "<li><a href=\"#loginmodal\">Login</a></li>";
+            }
+            ?>
+            
         </ul>
         <!--NAV Bar END-->
         <!--Mobile NAV START-->
@@ -26,7 +35,13 @@ include $_SERVER['DOCUMENT_ROOT']."/core/backend/settings.php";
             include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/links.php";
             include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/dropdown_mobile.php";
             ?>
-            <li><a href="#loginmodal">Login</a></li>
+           <?php
+            if ($userPermission > 0) {
+                echo "<li><a href=\"/core/user/logout.php\">Logout ".$userName."</a></li>";
+            } else {
+                echo "<li><a href=\"#loginmodal\">Login</a></li>";
+            }
+            ?>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
