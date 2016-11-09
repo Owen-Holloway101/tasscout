@@ -141,8 +141,8 @@ function getCookie(cname) {
 <!--Login Modal-->
 <div id="messagemodal" class="modal">
     <div class="modal-content">
-        <h4><script>document.write(getCookie("message_title"));</script></h4>
-        <p><script>document.write(getCookie("message"));</script></p>
+        <h4><script>document.write(unescape(decodeURIComponent(getCookie("message_title"))));</script></h4>
+        <p><script>document.write(unescape(decodeURIComponent(getCookie("message"))));</script></p>
     </div>
     <div class="modal-footer">
         <a onclick="$('#messagemodal').modal('close');" class=" modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
@@ -155,16 +155,16 @@ function getCookie(cname) {
     <div class="modal-content">
         <h4>Login</h4>
         </br>
-        <form class="col">
+        <form action="/core/user/login.php" id="login" method="post" class="col">
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="user_name" type="text" class="validate">
+                    <input id="user_name" name="user_name" type="text" class="validate">
                     <label for="user_name">Username</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
+                    <input id="password" name="password" type="password" class="validate">
                     <label for="password">Password</label>
                 </div>
             </div>
@@ -172,6 +172,6 @@ function getCookie(cname) {
     </div>
     <div class="modal-footer">
         <a onclick="$('#loginmodal').modal('close');" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-        <a onclick="login()" class=" modal-action modal-close waves-effect waves-green btn-flat">Login</a>
+        <a onclick="$('#login').submit();" class=" modal-action modal-close waves-effect waves-green btn-flat">Login</a>
     </div>
 </div>

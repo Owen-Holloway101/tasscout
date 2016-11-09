@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/core/user/user.php"; 
 
 /*
 destroy a session (security etc)
@@ -63,8 +64,6 @@ function generateSessionID() {
 	return $randomString;
 }
 
-include $_SERVER['DOCUMENT_ROOT']."/core/user/user.php"; 
-
 //Check the session
 if (isset($_COOKIE['session'])) {
 	$userName = getUserName($_COOKIE["session"]);
@@ -74,11 +73,12 @@ if (isset($_COOKIE['session'])) {
 	$userName = "null";
 	$userPermission = 0;
 }
-
+/*
 echo "<script>
 	var userName = ".$userName."
 	</script>";
 echo "<script>
 	var userPermission = ".$userPermission."
 	</script>";
+	*/
 ?>
