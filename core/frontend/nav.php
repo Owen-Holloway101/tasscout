@@ -5,11 +5,11 @@ include $_SERVER['DOCUMENT_ROOT']."/core/backend/settings.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
 ?>
 <head>
-<title><?php echo getSetting("group_name");?></title>
+<title><?php echo getSetting("groupname");?></title>
 </head>
 <!--Navigation-->
 <nav class="scarf" role="navigation">
-    <div class="nav-wrapper container grey darken-3"><a id="logo-container" class="brand-logo"><?php echo getSetting("group_name");?></a>
+    <div class="nav-wrapper container grey darken-3"><a id="logo-container" class="brand-logo"><?php echo getSetting("groupname");?></a>
         <!--NAV Bar START-->
         <ul class="right hide-on-med-and-down">
             <li><a href="/">Home</a></li>
@@ -52,7 +52,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
     not final
 </div>
 <script type="text/javascript">
-//Enable mobile pull out menu
+Enable mobile pull out menu
 (function($){
     $(function(){
     $('.button-collapse').sideNav();

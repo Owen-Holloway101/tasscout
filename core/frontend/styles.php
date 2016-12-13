@@ -1,7 +1,6 @@
 <?php
 //Owen Holloway 2016
 //@Zeryter
-
 function displayBackground()
 {
     $exact_dir = "/assets/background/";

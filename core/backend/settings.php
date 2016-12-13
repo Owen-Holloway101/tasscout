@@ -1,15 +1,15 @@
 <?php
 /*
-Gets the session ID (from cookie) and checks it against the database for a username
+Gets the setting from the server as return its value
 */
 
-function getSetting($setting) {
+function getSetting($settingName) {
 
 	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
-	$query = "SELECT ".$setting." FROM settings";
+	$query = "SELECT setting, value FROM settings";
 
-	$settingbind = 0;
+	$value = "null";
 
 	if ($stmt = $db->prepare($query)) {
 
@@ -17,22 +17,26 @@ function getSetting($setting) {
 		$stmt->execute();
 
 		/* bind result variables */
-		$stmt->bind_result($settingbind);
+		$stmt->bind_result($settingNameDB, $valueDB);
 
 		/* fetch values */
 		while ($stmt->fetch()) {
-				$settingreturn = $settingbind;
+			if ($settingNameDB == $settingName) {
+				$value = $valueDB;
+		}
 	}
 
 	/* close statement */
 	$stmt->close();
 
-	return $settingreturn;	
+	return $value;
 	}
 }
 
 /*
 Update a setting inserting some html into the database
+
+TODO 	this is currently broken
 */
 
 function updateSetting($setting, $value) {

@@ -7,4 +7,5 @@ if (getSetting("calendar")) {
 if ($userPermission >= 50) {
 	echo "<li><a href=\"/settings/\">Settings</a></li>";
 }
+
 ?>

@@ -1,5 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/core/backend/pagecontent.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
 
-updateContent($_POST['page'], $_POST['content']);
+if ($userPermission >= 50) {
+	updateContent($_POST['page'], $_POST['content']);
+}
 ?>
