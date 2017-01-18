@@ -12,6 +12,11 @@ if ($userPermission >= 80) {
 	updateSetting("scouts",isset($_POST['scouts']));
 	updateSetting("venturers",isset($_POST['venturers']));
 	updateSetting("rovers",isset($_POST['rovers']));
+	//extra pages
+	updateSetting("calendar",isset($_POST['calendar']));
+	updateSetting("hall_hire",isset($_POST['hall_hire']));
+	updateSetting("resources",isset($_POST['resources']));
+	updateSetting("parentsarea",isset($_POST['parentsarea']));
 
 	message_return("Settings Updated","The settings were updated");
 } else {

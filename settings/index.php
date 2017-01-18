@@ -38,6 +38,19 @@ function settingload() {
 	if (getSetting("rovers")) {
 	echo "$(\"#rovers\").prop(\"checked\", true);";
 	}
+
+	if (getSetting("calendar")) {
+	echo "$(\"#calendar\").prop(\"checked\", true);";
+	}
+	if (getSetting("hall_hire")) {
+	echo "$(\"#hall_hire\").prop(\"checked\", true);";
+	}
+	if (getSetting("resources")) {
+	echo "$(\"#resources\").prop(\"checked\", true);";
+	}
+	if (getSetting("parentsarea")) {
+	echo "$(\"#parentsarea\").prop(\"checked\", true);";
+	}
 	?>
 }
 </script>
@@ -70,6 +83,23 @@ function settingload() {
 					<p>
 					<input type="checkbox" name="rovers" id="rovers" />
 					<label for="rovers">Rovers</label>
+					</p>
+					<h5>Extra Pages</h5>
+					<p>
+					<input type="checkbox" name="calendar" id="calendar" />
+					<label for="calendar">Calendar</label>
+					</p>
+					<p>
+					<input type="checkbox" name="hall_hire" id="hall_hire" />
+					<label for="hall_hire">Hall Hire</label>
+					</p>
+					<p>
+					<input type="checkbox" name="resources" id="resources" />
+					<label for="resources">Resources</label>
+					</p>
+					<p>
+					<input type="checkbox" name="parentsarea" id="parentsarea" />
+					<label for="parentsarea">Parents Area</label>
 					</p>
 					<br>
 					<button class="btn waves-effect waves-light" type="submit" name="action" onclick="document.getElementById('updatesettings').submit();">Update
