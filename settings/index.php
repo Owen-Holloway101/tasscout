@@ -6,7 +6,9 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 	die();
 }
 ?>
-<main onload="settingload()">
+<body onload="settingload()">
+
+<main>
 <?php 
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/styles.php";
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/nav.php";
@@ -22,19 +24,19 @@ if(!isMobile()) {
 function settingload() {
 	<?php
 	if (getSetting("joeys")) {
-	echo "$(\"#Joeys\").prop(\"checked\", true);";
+	echo "$(\"#joeys\").prop(\"checked\", true);";
 	}
 	if (getSetting("cubs")) {
-	echo "$(\"#Cubs\").prop(\"checked\", true);";
+	echo "$(\"#cubs\").prop(\"checked\", true);";
 	}
 	if (getSetting("scouts")) {
-	echo "$(\"#Scouts\").prop(\"checked\", true);";
+	echo "$(\"#scouts\").prop(\"checked\", true);";
 	}
 	if (getSetting("venturers")) {
-	echo "$(\"#Venturers\").prop(\"checked\", true);";
+	echo "$(\"#venturers\").prop(\"checked\", true);";
 	}
 	if (getSetting("rovers")) {
-	echo "$(\"#Rovers\").prop(\"checked\", true);";
+	echo "$(\"#rovers\").prop(\"checked\", true);";
 	}
 	?>
 }
@@ -43,33 +45,42 @@ function settingload() {
     <div class="col s12 l8 push-l2">
         <div class="card">
 			<div class="card-content">
-				<div class="input-field col s12">
-					<input value='test' id="groupname" type="text" class="validate">
-					<label class="active" for="groupname">Group Name</label>
-				</div>
-				<h5>Available Sections</h5>
-				<p>
-				<input type="checkbox" id="Joeys" />
-				<label for="Joeys">Joeys</label>
-				</p>
-				<p>
-				<input type="checkbox" id="Cubs" />
-				<label for="Cubs">Cubs</label>
-				</p>
-				<p>
-				<input type="checkbox" id="Scouts" />
-				<label for="Scouts">Scouts</label>
-				</p>
-				<p>
-				<input type="checkbox" id="Venturers" />
-				<label for="Venturers">Venturers</label>
-				</p>
-				<p>
-				<input type="checkbox" id="Rovers" />
-				<label for="Rovers">Rovers</label>
-				</p>
+				<form action="/core/backend/updatesettings.php" onkeypress="" id="updatesettings" method="post">
+					<h5>Group Name</h5>
+					<div class="input-field col s12">
+						<input value='<?php echo getSetting("groupname");?>' name="groupname" id="groupname" type="text" class="validate">
+					</div>
+					<h5>Available Sections</h5>
+					<p>
+					<input type="checkbox" name="joeys" id="joeys" />
+					<label for="joeys">Joeys</label>
+					</p>
+					<p>
+					<input type="checkbox" name="cubs" id="cubs" />
+					<label for="cubs">Cubs</label>
+					</p>
+					<p>
+					<input type="checkbox" name="scouts" id="scouts" />
+					<label for="scouts">Scouts</label>
+					</p>
+					<p>
+					<input type="checkbox" name="venturers" id="venturers" />
+					<label for="venturers">Venturers</label>
+					</p>
+					<p>
+					<input type="checkbox" name="rovers" id="rovers" />
+					<label for="rovers">Rovers</label>
+					</p>
+					<br>
+					<button class="btn waves-effect waves-light" type="submit" name="action" onclick="document.getElementById('updatesettings').submit();">Update
+					</button>
+				</form>
 			</div>
 		</div>
 	</div>
 </div>
 </main>
+<?php
+include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/footer.php";
+?>
+</body>

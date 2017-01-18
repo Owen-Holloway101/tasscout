@@ -54,5 +54,8 @@ if(!isMobile()) {
 		</div>
 	</div>
 </div>
-
 </main>
+
+<?php
+include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/footer.php";
+?>

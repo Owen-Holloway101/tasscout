@@ -42,12 +42,12 @@ TODO 	this is currently broken
 function updateSetting($setting, $value) {
 
 	//This inserts a new user into the system with the pass $pass, it also salts the password
-	require $_SERVER['DOCUMENT_ROOT']."/core/db.php";
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 
-	$stmt = $db->prepare("UPDATE settings SET ".$setting."=?");
+	$stmt = $db->prepare("UPDATE settings SET value=? WHERE setting=?");
 	echo $db->error;
-	$stmt->bind_param("is",$value,$setting);
+	$stmt->bind_param("ss",$value,$setting);
 	
 	$stmt->execute();
 

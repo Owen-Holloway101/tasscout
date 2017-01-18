@@ -2,25 +2,17 @@
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-            <h5 class="white-text">Social</h5>
             <ul>
-            <li><a class="grey-text text-lighten-3" href="https://twitter.com/Zeryter">Twitter</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://facebook.com/finlan101">Facebook</a></li>
-            <li><a class="grey-text text-lighten-3" href="mailto:owen.holloway101@gmail.com">Email</a></li>
+            <li><a class="grey-text text-lighten-3" href="http://www.scouts.com.au/">Scouts Australia</a></li>
+            <li><a class="grey-text text-lighten-3" href="http://www.tas.scouts.com.au/">Scouts Tasmania</a></li>
             </ul>
             <p class="grey-text text-lighten-4"></p>
             </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Code</h5>
-                <ul>
-                <li><a class="grey-text text-lighten-3" href="https://github.com/owen-holloway101">GitHub</a></li>
-                </ul>
-            </div>
         </div>
     </div>
-    <div class="footer-copyright green darken-2">
+    <div class="footer-copyright scouts-aus-green">
         <div class="container">
-        © 2016 @Zertyer
+        © 2017 Scouts Australia Tasmania Branch. Website development by Owen Holloway <a href="https://zeryter.tk">@Zeryter</a>
         </div>
     </div>
 </footer>
