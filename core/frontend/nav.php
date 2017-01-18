@@ -44,10 +44,6 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
     </div>
     <!--Mobile NAV END-->
 </nav>
-<div class="watermark">
-    Example site <br>
-    not final
-</div>
 <script type="text/javascript">
 //Enable mobile pull out menu
 (function($){
