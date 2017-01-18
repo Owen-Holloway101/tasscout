@@ -11,8 +11,8 @@ if (getSetting("resources")) {
 	echo "<li><a href=\"/resources/\">Resources</a></li>";
 }
 
-if (getSetting("roversarea") && $userPermission >= 20) {
-	echo "<li><a href=\"/roversarea/\">Private</a></li>";
+if (getSetting("rovers") && $userPermission >= 20) {
+	echo "<li><a href=\"/rovers/\">Private</a></li>";
 }
 
 if ($userPermission >= 50) {
