@@ -1,2 +1,3 @@
 #Keep private files out of the VCS so we don't leak passwords
 **.private.**
+/assets/background/**

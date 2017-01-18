@@ -48,7 +48,7 @@ function displayBackground()
 <link rel="stylesheet" type="text/css" href="/core/frontend/global.css"/>
 
 <style>
-	body
+	main
 	{
 	background: url(<?php displayBackground();?>) no-repeat center center fixed; 
 	-webkit-background-size: cover;

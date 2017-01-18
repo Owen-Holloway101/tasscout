@@ -3,6 +3,20 @@
 	padding-right: 10px;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+footer.page-footer{
+	margin-top: 0px !important;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 a {
 	cursor: pointer;
 }

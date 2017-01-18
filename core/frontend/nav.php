@@ -52,7 +52,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
     not final
 </div>
 <script type="text/javascript">
-Enable mobile pull out menu
+//Enable mobile pull out menu
 (function($){
     $(function(){
     $('.button-collapse').sideNav();

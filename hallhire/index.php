@@ -6,7 +6,7 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 	die();
 }
 ?>
-<body>
+<main>
 <?php 
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/styles.php";
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/nav.php";
@@ -50,4 +50,4 @@ if(!isMobile()) {
 	</div>
 </div>
 
-</body>
+</main>

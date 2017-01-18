@@ -6,7 +6,7 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 	die();
 }
 ?>
-<body onload="settingload()">
+<main onload="settingload()">
 <?php 
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/styles.php";
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/nav.php";
@@ -43,6 +43,10 @@ function settingload() {
     <div class="col s12 l8 push-l2">
         <div class="card">
 			<div class="card-content">
+				<div class="input-field col s12">
+					<input value='test' id="groupname" type="text" class="validate">
+					<label class="active" for="groupname">Group Name</label>
+				</div>
 				<h5>Available Sections</h5>
 				<p>
 				<input type="checkbox" id="Joeys" />
@@ -68,4 +72,4 @@ function settingload() {
 		</div>
 	</div>
 </div>
-</body>
+</main>

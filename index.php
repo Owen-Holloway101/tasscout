@@ -6,7 +6,7 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 	die();
 }
 ?>
-<body>
+<main>
 
 <?php 
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/styles.php";
@@ -16,7 +16,7 @@ include $_SERVER['DOCUMENT_ROOT']."/core/backend/pagecontent.php";
 ?>
 
 <script>
-var pagename = 'index';
+var pagename = 'index.php';
 savePageCookie();
 </script>
 
@@ -39,5 +39,7 @@ savePageCookie();
 		</div>
 	</div>
 </div>
-
-</body>
+</main>
+<?php
+include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/footer.php";
+?>
