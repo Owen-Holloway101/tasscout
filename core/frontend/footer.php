@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-copyright scouts-aus-green">
+    <div class="footer-copyright rover-red">
         <div class="container">
         © 2017 Scouts Australia Tasmania Branch. Website development by Owen Holloway <a href="https://zeryter.tk">@Zeryter</a>
         </div>

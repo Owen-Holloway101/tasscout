@@ -20,28 +20,23 @@ savePageCookie();
 </script>
 
 <script>
-//Remove the grey background and change it to section colour
-$(".nav-wrapper").removeClass("darken-3");
-$(".nav-wrapper").removeClass("grey");
-$(".nav-wrapper").addClass("rover-red");
-
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Rovers\");";
+	echo "$(\"#logo-container\").append(\" - Private\");";
 } else {
-	echo "$(\"#logo-container\").text(\"Rovers\");";
+	echo "$(\"#logo-container\").text(\"Private\");";
 }
 ?>
 
 </script>
-
 <div class="row">
     <div class="col s12 l8 push-l2">
         <div class="card">
 			<div class="card-content">
 				<div class="editable">
 				<?php
-				echo getContent("rovers");
+				if ($userPermission >= 20) echo getContent("rovers");
+				else echo "Sorry you don't have permission to see this";
 				?>
 				</div>
 			</div>

@@ -15,9 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
             <li><a href="/">Home</a></li>
             <?php
             include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/links.php";
-            include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/dropdown.php";
             ?>
-            <li><a class="dropdown-button" href="#!" data-activates="sections">Sections<i class="material-icons right">arrow_drop_down</i></a></li>
             <?php
             if ($userPermission > 0) {
                 echo "<li><a href=\"/core/user/logout.php\">Logout ".$userName."</a></li>";
@@ -33,7 +31,6 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
             <li><a href="/">Home</a></li>
             <?php
             include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/links.php";
-            include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/dropdown_mobile.php";
             ?>
            <?php
             if ($userPermission > 0) {

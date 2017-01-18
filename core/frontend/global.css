@@ -27,23 +27,23 @@ a {
 }
 
 .joey-brown {
-	background-color: #B86125;
+	background-color: #B86125 !important;
 }
 
 .cub-yellow {
-	background-color: #FFC72C;
+	background-color: #FFC72C !important; 
 }
 
 .scout-green {
-	background-color: #00B140;
+	background-color: #00B140 !important;
 }
 
 .venturer-maroon {
-	background-color: #9D2235;
+	background-color: #9D2235 !important;
 }
 
 .rover-red {
-	background-color: #da291c;
+	background-color: #da291c !important;
 }
 
 .watermark {

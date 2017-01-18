@@ -23,22 +23,6 @@ if(!isMobile()) {
 
 function settingload() {
 	<?php
-	if (getSetting("joeys")) {
-	echo "$(\"#joeys\").prop(\"checked\", true);";
-	}
-	if (getSetting("cubs")) {
-	echo "$(\"#cubs\").prop(\"checked\", true);";
-	}
-	if (getSetting("scouts")) {
-	echo "$(\"#scouts\").prop(\"checked\", true);";
-	}
-	if (getSetting("venturers")) {
-	echo "$(\"#venturers\").prop(\"checked\", true);";
-	}
-	if (getSetting("rovers")) {
-	echo "$(\"#rovers\").prop(\"checked\", true);";
-	}
-
 	if (getSetting("calendar")) {
 	echo "$(\"#calendar\").prop(\"checked\", true);";
 	}
@@ -48,8 +32,8 @@ function settingload() {
 	if (getSetting("resources")) {
 	echo "$(\"#resources\").prop(\"checked\", true);";
 	}
-	if (getSetting("parentsarea")) {
-	echo "$(\"#parentsarea\").prop(\"checked\", true);";
+	if (getSetting("roversarea")) {
+	echo "$(\"#roversarea\").prop(\"checked\", true);";
 	}
 	?>
 }
@@ -63,27 +47,6 @@ function settingload() {
 					<div class="input-field col s12">
 						<input value='<?php echo getSetting("groupname");?>' name="groupname" id="groupname" type="text" class="validate">
 					</div>
-					<h5>Available Sections</h5>
-					<p>
-					<input type="checkbox" name="joeys" id="joeys" />
-					<label for="joeys">Joeys</label>
-					</p>
-					<p>
-					<input type="checkbox" name="cubs" id="cubs" />
-					<label for="cubs">Cubs</label>
-					</p>
-					<p>
-					<input type="checkbox" name="scouts" id="scouts" />
-					<label for="scouts">Scouts</label>
-					</p>
-					<p>
-					<input type="checkbox" name="venturers" id="venturers" />
-					<label for="venturers">Venturers</label>
-					</p>
-					<p>
-					<input type="checkbox" name="rovers" id="rovers" />
-					<label for="rovers">Rovers</label>
-					</p>
 					<h5>Extra Pages</h5>
 					<p>
 					<input type="checkbox" name="calendar" id="calendar" />
@@ -98,8 +61,8 @@ function settingload() {
 					<label for="resources">Resources</label>
 					</p>
 					<p>
-					<input type="checkbox" name="parentsarea" id="parentsarea" />
-					<label for="parentsarea">Parents Area</label>
+					<input type="checkbox" name="roversarea" id="roversarea" />
+					<label for="roversarea">Rovers Area</label>
 					</p>
 					<br>
 					<button class="btn waves-effect waves-light" type="submit" name="action" onclick="document.getElementById('updatesettings').submit();">Update
