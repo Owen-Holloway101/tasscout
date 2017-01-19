@@ -18,13 +18,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
             include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/dropdown.php";
             ?>
             <li><a class="dropdown-button" href="#!" data-activates="sections">Sections<i class="material-icons right">arrow_drop_down</i></a></li>
-            <?php
-            if ($userPermission > 0) {
-                echo "<li><a href=\"/core/user/logout.php\">Logout ".$userName."</a></li>";
-            } else {
-                echo "<li><a href=\"#loginmodal\">Login</a></li>";
-            }
-            ?>
+            <li><a class="dropdown-button" href="#!" data-activates="user">User<i class="material-icons right">arrow_drop_down</i></a></li>
             
         </ul>
         <!--NAV Bar END-->
@@ -40,6 +34,9 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
                 echo "<li><a href=\"/core/user/logout.php\">Logout ".$userName."</a></li>";
             } else {
                 echo "<li><a href=\"#loginmodal\">Login</a></li>";
+            }
+            if ($userPermission >= 50) {
+                echo "<li><a href=\"/settings/\">Settings</a></li>";
             }
             ?>
         </ul>

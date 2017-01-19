@@ -27,7 +27,6 @@ $(".nav-wrapper").addClass("joey-brown");
 
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Joeys\");";
 } else {
 	echo "$(\"#logo-container\").text(\"Joeys\");";
 }

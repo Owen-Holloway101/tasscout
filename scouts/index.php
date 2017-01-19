@@ -27,7 +27,6 @@ $(".nav-wrapper").addClass("scout-green");
 
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Scouts\");";
 } else {
 	echo "$(\"#logo-container\").text(\"Scouts\");";
 }

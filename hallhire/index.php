@@ -22,7 +22,6 @@ savePageCookie();
 <script>
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Hall Hire\");";
 } else {
 	echo "$(\"#logo-container\").text(\"Hall Hire\");";
 }

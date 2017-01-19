@@ -22,7 +22,9 @@ savePageCookie();
 <script>
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Calendar\");";
+
+} else {
+	echo "$(\"#logo-container\").text(\"Calendar\");";
 }
 ?>
 </script>

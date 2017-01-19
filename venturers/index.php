@@ -27,7 +27,6 @@ $(".nav-wrapper").addClass("venturer-maroon");
 
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Venturers\");";
 } else {
 	echo "$(\"#logo-container\").text(\"Venturers\");";
 }

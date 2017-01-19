@@ -14,9 +14,4 @@ if (getSetting("resources")) {
 if (getSetting("parentsarea") && $userPermission >= 20) {
 	echo "<li><a href=\"/parentsarea/\">Parents</a></li>";
 }
-
-if ($userPermission >= 50) {
-	echo "<li><a href=\"/settings/\">Settings</a></li>";
-}
-
 ?>

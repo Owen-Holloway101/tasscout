@@ -22,7 +22,6 @@ savePageCookie();
 <script>
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Parents Area\");";
 } else {
 	echo "$(\"#logo-container\").text(\"Parents Area\");";
 }

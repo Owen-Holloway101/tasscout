@@ -27,7 +27,6 @@ $(".nav-wrapper").addClass("cub-yellow");
 
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Cubs\");";
 } else {
 	echo "$(\"#logo-container\").text(\"Cubs\");";
 }

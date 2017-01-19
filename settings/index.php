@@ -17,7 +17,8 @@ include $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 <script>
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Settings\");";
+} else {
+	echo "$(\"#logo-container\").text(\"Settings\");";
 }
 ?>
 
@@ -65,40 +66,40 @@ function settingload() {
 					</div>
 					<h5>Available Sections</h5>
 					<p>
-					<input type="checkbox" name="joeys" id="joeys" />
+					<input type="checkbox" class="filled-in" name="joeys" id="joeys" />
 					<label for="joeys">Joeys</label>
 					</p>
 					<p>
-					<input type="checkbox" name="cubs" id="cubs" />
+					<input type="checkbox" class="filled-in" name="cubs" id="cubs" />
 					<label for="cubs">Cubs</label>
 					</p>
 					<p>
-					<input type="checkbox" name="scouts" id="scouts" />
+					<input type="checkbox" class="filled-in" name="scouts" id="scouts" />
 					<label for="scouts">Scouts</label>
 					</p>
 					<p>
-					<input type="checkbox" name="venturers" id="venturers" />
+					<input type="checkbox" class="filled-in" name="venturers" id="venturers" />
 					<label for="venturers">Venturers</label>
 					</p>
 					<p>
-					<input type="checkbox" name="rovers" id="rovers" />
+					<input type="checkbox" class="filled-in" name="rovers" id="rovers" />
 					<label for="rovers">Rovers</label>
 					</p>
 					<h5>Extra Pages</h5>
 					<p>
-					<input type="checkbox" name="calendar" id="calendar" />
+					<input type="checkbox" class="filled-in" name="calendar" id="calendar" />
 					<label for="calendar">Calendar</label>
 					</p>
 					<p>
-					<input type="checkbox" name="hall_hire" id="hall_hire" />
+					<input type="checkbox" class="filled-in" name="hall_hire" id="hall_hire" />
 					<label for="hall_hire">Hall Hire</label>
 					</p>
 					<p>
-					<input type="checkbox" name="resources" id="resources" />
+					<input type="checkbox" class="filled-in" name="resources" id="resources" />
 					<label for="resources">Resources</label>
 					</p>
 					<p>
-					<input type="checkbox" name="parentsarea" id="parentsarea" />
+					<input type="checkbox" class="filled-in" name="parentsarea" id="parentsarea" />
 					<label for="parentsarea">Parents Area</label>
 					</p>
 					<br>

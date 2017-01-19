@@ -27,7 +27,6 @@ $(".nav-wrapper").addClass("rover-red");
 
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Rovers\");";
 } else {
 	echo "$(\"#logo-container\").text(\"Rovers\");";
 }
