@@ -17,7 +17,8 @@ include $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 <script>
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Settings\");";
+} else {
+	echo "$(\"#logo-container\").text(\"Settings\");";
 }
 ?>
 

@@ -22,7 +22,6 @@ savePageCookie();
 <script>
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Private\");";
 } else {
 	echo "$(\"#logo-container\").text(\"Private\");";
 }

@@ -22,7 +22,6 @@ savePageCookie();
 <script>
 <?php
 if(!isMobile()) {
-	echo "$(\"#logo-container\").append(\" - Resources\");";
 } else {
 	echo "$(\"#logo-container\").text(\"Resources\");";
 }
