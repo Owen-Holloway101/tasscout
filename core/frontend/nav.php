@@ -38,6 +38,9 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
             if ($userPermission >= 50) {
                 echo "<li><a href=\"/settings/\">Settings</a></li>";
             }
+            if ($userPermission >= 80) {
+                echo "<li><a href=\"/settings/\">User Settings</a></li>";
+            }
             ?>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
