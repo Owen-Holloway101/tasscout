@@ -1,8 +1,2 @@
-#rm -Rf ../webroot/*
-#cp -R ./** ../webroot
-
-#scp copy for mobile dev
-#scp -r -p 44 ./** zeryter.tk:/Library/WebServer/Documents/
-
 #rsync for mobile dev
 rsync -av -e 'ssh -p 22' --progress ./** zeryter.tk:/var/www/wellytest
