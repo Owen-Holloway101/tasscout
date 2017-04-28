@@ -7,10 +7,9 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 }
 ?>
 <main>
+
 <?php 
-include $_SERVER['DOCUMENT_ROOT']."/core/frontend/styles.php";
-include $_SERVER['DOCUMENT_ROOT']."/core/frontend/nav.php";
-include $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
+include $_SERVER['DOCUMENT_ROOT']."/core/frontend/ui.php";
 include $_SERVER['DOCUMENT_ROOT']."/core/backend/pagecontent.php";
 ?>
 
@@ -22,39 +21,36 @@ savePageCookie();
 <script>
 //Remove the grey background and change it to section colour
 $(".nav-wrapper").removeClass("darken-3");
-$(".nav-wrapper").removeClass("grey");
+$(".nav-wrapper").removeClass("rover-red");
 $(".nav-wrapper").addClass("joey-brown");
-
-<?php
-if(!isMobile()) {
-} else {
-	echo "$(\"#logo-container\").text(\"Joeys\");";
-}
-?>
+$(".brand-logo").text("Joeys");
 
 </script>
 
-<div class="row">
-    <div class="col s12 l8 push-l2">
-        <div class="card">
-			<div class="card-content">
-				<div class="editable">
-				<?php
-				echo getContent("joeys");
-				?>
-				</div>
-			</div>
-			<?php if ($userPermission >= 50) {
-				echo "<div class=\"card-action\">
-				<a onclick=\"edit();\" class=\"editbutton\">Edit</a>
-        	</div>";
-			}
+<div class="parallax-container">
+	<div class="parallax"><img src=<?php displayBackground()?>></div>
+</div>
+
+<div class="section white">
+	<div class="row container">
+		<div class="editable">
+			<?php
+			echo getContent("joeys");
 			?>
 		</div>
+		<?php if ($userPermission >= 50) {
+		echo "<div class=\"card-action\">
+		<a onclick=\"edit();\" class=\"editbutton\">Edit</a>
+				</div>";
+		}
+		?>
 	</div>
 </div>
-</main>
 
+<div class="parallax-container">
+	<div class="parallax"><img src=<?php displayBackground()?>></div>
+</div>
+</main>
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/footer.php";
 ?>

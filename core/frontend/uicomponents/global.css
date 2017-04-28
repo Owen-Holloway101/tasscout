@@ -1,0 +1,39 @@
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.padded {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/*Sectional colours from the brand manual*/
+.scouts-aus-green {
+	background-color: #006633 !important;
+}
+
+.joey-brown {
+	background-color: #B86125 !important;
+}
+
+.cub-yellow {
+	background-color: #FFC72C !important;
+}
+
+.scout-green {
+	background-color: #00B140 !important;
+}
+
+.venturer-maroon {
+	background-color: #9D2235 !important;
+}
+
+.rover-red {
+	background-color: #da291c !important;
+}

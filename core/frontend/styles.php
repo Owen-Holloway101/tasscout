@@ -137,7 +137,7 @@ function getCookie(cname) {
 
 </script>
 
-<!--Login Modal-->
+<!--Message Modal-->
 <div id="messagemodal" class="modal">
     <div class="modal-content">
         <h4><script>document.write(unescape(decodeURIComponent(getCookie("message_title"))));</script></h4>
