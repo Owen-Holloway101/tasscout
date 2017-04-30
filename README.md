@@ -1,5 +1,4 @@
-This is a test readme
+A website framework for scout groups
 
-https://www.tinymce.com/
-
-Mobile detect 
+This currently has no license and therefore cannot be used for any purpose unless explicitly stated by myself 
+(Owen Holloway)

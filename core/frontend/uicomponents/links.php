@@ -1,3 +1,5 @@
+<li><a href="/">Home</a></li>
+
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/core/backend/settings.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/core/user/session.php";
