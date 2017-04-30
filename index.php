@@ -26,7 +26,7 @@ savePageCookie();
 			<div class="card-content">
 				<div class="editable">
 				<?php
-				echo getContent("index");
+				echo getContent("index.php");
 				?>
 				</div>
 			</div>
