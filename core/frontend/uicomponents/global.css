@@ -49,9 +49,9 @@ main {
 
 @media only screen and (min-width: 993px) {
 	.parallax-container {
-		height: 800px;
+		height: 500px;
 	}
 	  .parallax img {
-		  max-width: 120%; /* or a little bit higher */
+		  max-width: 160%; /* or a little bit higher */
 	}
 }
