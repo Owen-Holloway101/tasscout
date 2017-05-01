@@ -49,63 +49,16 @@ function settingload() {
 </script>
 
 <div class="parallax-container">
-	<div class="parallax"><img src=<?php displayBackground()?>></div>
+	<div class="parallax"><img src="/assets/settingsbackdrop.jpeg"></div>
 </div>
 
 <div class="section white">
 	<div class="row container">
-		<form action="/core/backend/updatesettings.php" onkeypress="" id="updatesettings" method="post">
-			<h5>Group Name</h5>
-			<div class="input-field col s12">
-				<input value='<?php echo getSetting("groupname");?>' name="groupname" id="groupname" type="text" class="validate">
-			</div>
-			<h5>Available Sections</h5>
-			<p>
-			<input type="checkbox" class="filled-in" name="joeys" id="joeys" />
-			<label for="joeys">Joeys</label>
-			</p>
-			<p>
-			<input type="checkbox" class="filled-in" name="cubs" id="cubs" />
-			<label for="cubs">Cubs</label>
-			</p>
-			<p>
-			<input type="checkbox" class="filled-in" name="scouts" id="scouts" />
-			<label for="scouts">Scouts</label>
-			</p>
-			<p>
-			<input type="checkbox" class="filled-in" name="venturers" id="venturers" />
-			<label for="venturers">Venturers</label>
-			</p>
-			<p>
-			<input type="checkbox" class="filled-in" name="rovers" id="rovers" />
-			<label for="rovers">Rovers</label>
-			</p>
-			<h5>Extra Pages</h5>
-			<p>
-			<input type="checkbox" class="filled-in" name="calendar" id="calendar" />
-			<label for="calendar">Calendar</label>
-			</p>
-			<p>
-			<input type="checkbox" class="filled-in" name="hall_hire" id="hall_hire" />
-			<label for="hall_hire">Hall Hire</label>
-			</p>
-			<p>
-			<input type="checkbox" class="filled-in" name="resources" id="resources" />
-			<label for="resources">Resources</label>
-			</p>
-			<p>
-			<input type="checkbox" class="filled-in" name="parentsarea" id="parentsarea" />
-			<label for="parentsarea">Parents Area</label>
-			</p>
-			<br>
-			<button class="btn waves-effect waves-light" type="submit" name="action" onclick="document.getElementById('updatesettings').submit();">Update
-			</button>
-		</form>
 	</div>
 </div>
 
 <div class="parallax-container">
-<div class="parallax"><img src=<?php displayBackground()?>></div>
+<div class="parallax"><img src="/assets/settingsbackdrop.jpeg"></div>
 </div>
 </main>
 <?php

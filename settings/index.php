@@ -49,7 +49,7 @@ function settingload() {
 </script>
 
 <div class="parallax-container">
-	<div class="parallax"><img src=<?php displayBackground()?>></div>
+	<div class="parallax"><img src="/assets/settingsbackdrop.jpeg"></div>
 </div>
 
 <div class="section white">
@@ -105,7 +105,7 @@ function settingload() {
 </div>
 
 <div class="parallax-container">
-<div class="parallax"><img src=<?php displayBackground()?>></div>
+<div class="parallax"><img src="/assets/settingsbackdrop.jpeg"></div>
 </div>
 </main>
 <?php
