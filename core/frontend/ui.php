@@ -11,12 +11,14 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <!--Love me some good jquery-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
-<script type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script> 
+<script async src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script async type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script> 
 
 <!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+<link rel="stylesheet" href="">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" media="none" onload="if(media!='all')media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"></noscript>
 
 <!--Text Editor-->
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
