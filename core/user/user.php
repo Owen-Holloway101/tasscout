@@ -117,10 +117,6 @@ function checkSalt($user, $pass) {
 	//This checks if the user has provided the correct passwor
 	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
-	//This is only needed for php <5.5
-	require $_SERVER['DOCUMENT_ROOT'].'/core/lib/password_compat.php';
-	
-
 	$sPassFound = False;
 	$passAccepted = False;
 	$sPassword = "null";
