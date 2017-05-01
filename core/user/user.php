@@ -3,6 +3,71 @@
 //@Zeryter
 
 /*
+How many users currently exist in the system
+*/
+
+function getNoUsers() {
+
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
+
+	$query = "SELECT COUNT(*) FROM USERS";
+
+	$users = "0";
+
+	if ($stmt = $db->prepare($query)) {
+
+		/* execute statement */
+		$stmt->execute();
+
+		/* bind result variables */
+		$stmt->bind_result($returnusers);
+
+		/* fetch values */
+		while ($stmt->fetch()) {
+			$users = $returnusers;
+		}
+		/* close statement */
+		$stmt->close();
+
+	return $users;	
+	}
+}
+
+/*
+Return all the user names
+*/
+
+function getAllUsers() {
+
+	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
+
+	$query = "SELECT UNAME, PERMISSION FROM USERS";
+
+	$users = array();
+	$userNo = 1;
+
+	if ($stmt = $db->prepare($query)) {
+
+		/* execute statement */
+		$stmt->execute();
+
+		/* bind result variables */
+		$stmt->bind_result($username,$permission);
+
+		/* fetch values */
+		while ($stmt->fetch()) {
+			$users[$userNo][0] = $username;
+			$users[$userNo][1] = $permission;
+			$userNo++;
+		}
+		/* close statement */
+		$stmt->close();
+
+	return $users;	
+	}
+}
+
+/*
 Gets the session ID (from cookie) and checks it against the database for a username
 */
 

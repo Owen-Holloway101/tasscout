@@ -6,61 +6,46 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 	die();
 }
 ?>
-<body onload="settingload()">
+<body background="/assets/settingsbackdrop.jpeg">
 <main>
 <?php 
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/ui.php";
-require_once $_SERVER['DOCUMENT_ROOT']."/core/backend/settings.php";
+//require_once $_SERVER['DOCUMENT_ROOT']."/core/user/users.php";
 ?>
 
-<script type="text/javascript">
-function settingload() {
-	<?php
-	if (getSetting("joeys")) {
-	echo "$(\"#joeys\").prop(\"checked\", true);";
-	}
-	if (getSetting("cubs")) {
-	echo "$(\"#cubs\").prop(\"checked\", true);";
-	}
-	if (getSetting("scouts")) {
-	echo "$(\"#scouts\").prop(\"checked\", true);";
-	}
-	if (getSetting("venturers")) {
-	echo "$(\"#venturers\").prop(\"checked\", true);";
-	}
-	if (getSetting("rovers")) {
-	echo "$(\"#rovers\").prop(\"checked\", true);";
-	}
+<div class="row">
+	<div class="col s12 l8 push-l2">
+		<div class="card">
+			<div class="card-content">
+			<h5>Users</h5>
+			<table>
+				<thead>
+					<tr>
+						<th>User Name</th>
+						<th>Permission</th>
+					</tr>
+				</thead>
 
-	if (getSetting("calendar")) {
-	echo "$(\"#calendar\").prop(\"checked\", true);";
-	}
-	if (getSetting("hall_hire")) {
-	echo "$(\"#hall_hire\").prop(\"checked\", true);";
-	}
-	if (getSetting("resources")) {
-	echo "$(\"#resources\").prop(\"checked\", true);";
-	}
-	if (getSetting("parentsarea")) {
-	echo "$(\"#parentsarea\").prop(\"checked\", true);";
-	}
-	?>
-}
-</script>
-
-<div class="parallax-container">
-	<div class="parallax"><img src="/assets/settingsbackdrop.jpeg"></div>
-</div>
-
-<div class="section white">
-	<div class="row container">
+				<tbody>
+					
+					<?php
+					$users = getAllUsers();
+					for ($usercount; $usercount < getNoUsers(); $usercount++) {
+						echo "<tr>";
+						echo "<td>".$users[$usercount+1][0]."</td>";
+						echo "<td>".$users[$usercount+1][1]."</td>";
+						echo "</tr>";
+					}
+					?>
+				</tbody>
+			</table>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div class="parallax-container">
-<div class="parallax"><img src="/assets/settingsbackdrop.jpeg"></div>
-</div>
 </main>
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/footer.php";
 ?>
+
