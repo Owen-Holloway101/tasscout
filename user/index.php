@@ -17,12 +17,12 @@ include $_SERVER['DOCUMENT_ROOT']."/core/frontend/ui.php";
 	<div class="col s12 l8 push-l2">
 		<div class="card">
 			<div class="card-content">
-			<h5>Users</h5>
 			<table>
 				<thead>
 					<tr>
 						<th>User Name</th>
 						<th>Permission</th>
+						<th></th>
 					</tr>
 				</thead>
 
@@ -34,6 +34,7 @@ include $_SERVER['DOCUMENT_ROOT']."/core/frontend/ui.php";
 						echo "<tr>";
 						echo "<td>".$users[$usercount+1][0]."</td>";
 						echo "<td>".$users[$usercount+1][1]."</td>";
+						echo "<td><a class=\"btn-floating\"><i class=\"material-icons\">edit</i></a></td>";
 						echo "</tr>";
 					}
 					?>

@@ -38,7 +38,13 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 		<ul class="right hide-on-med-and-down">
 			<?php include $_SERVER['DOCUMENT_ROOT']."/core/frontend/uicomponents/links.php"; ?>
 			<li><a class="dropdown-button" href="#!" data-activates="sections">Sections<i class="material-icons right">arrow_drop_down</i></a></li>
-			<li><a class="dropdown-button" href="#!" data-activates="user">User<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a class="dropdown-button" href="#!" data-activates="user"><?php 
+			if ($userPermission <= 0) {
+				echo "User";
+			} else if ($userPermission > 0) {
+				echo "Preferences";
+			}
+			?><i class="material-icons right">arrow_drop_down</i></a></li>
 			<?php include $_SERVER['DOCUMENT_ROOT']."/core/frontend/uicomponents/dropdown.php"; ?>
 		</ul>
 		<ul class="side-nav" id="mobile">
@@ -52,7 +58,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
                 echo "<li><a href=\"#loginmodal\">Login</a></li>";
             }
             if ($userPermission >= 50) {
-                echo "<li><a href=\"/settings/\">Settings</a></li>";
+                echo "<li><a href=\"/settings/\">Page Setup</a></li>";
             }
             if ($userPermission >= 80) {
                 echo "<li><a href=\"/settings/\">User Settings</a></li>";
