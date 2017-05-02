@@ -63,7 +63,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
                 echo "<li><a href=\"/settings/\">Page Setup</a></li>";
             }
             if ($userPermission >= 80) {
-                echo "<li><a href=\"/settings/\">User Settings</a></li>";
+                echo "<li><a href=\"/user/\">User Settings</a></li>";
             }
             ?>
 		</ul>
