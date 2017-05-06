@@ -1,5 +1,6 @@
-$( document ).ready();
-$(window).on('load',function(){
+window.onload = loadfunction();
+
+function loadfunction() {
   //Mobile Navigation
   $('.button-collapse').sideNav({
     menuWidth: 300, // Default is 300
@@ -18,7 +19,7 @@ $(window).on('load',function(){
 
   //Checks for any messages that are waiting for the user
   checkMessage()
-});
+}
 
 function checkMessage() {
     var messageCookie = getCookie("message");

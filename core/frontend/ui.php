@@ -11,7 +11,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <!--Love me some good jquery-->
-<script async src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
 <script async type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script> 
 
 <!-- Compiled and minified CSS -->
@@ -29,7 +29,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
-<script src="/core/frontend/uicomponents/ui.js"></script>
+<script src="/core/frontend/uicomponents/ui.js" defer></script>
 
 <link rel="stylesheet" type="text/css" href="/core/frontend/uicomponents/global.css"/>
 
