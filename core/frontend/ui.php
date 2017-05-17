@@ -3,6 +3,9 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/frontend/uicomponents/backdrops.ph
 require_once $_SERVER['DOCUMENT_ROOT']."/core/backend/settings.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 ?>
+<head>
+
+<title><?php echo getSetting("groupname");?></title>
 
 <!--We use UTF-8 here-->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -30,7 +33,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 <script src="/core/frontend/uicomponents/ui.js"></script>
 
 <link rel="stylesheet" type="text/css" href="/core/frontend/uicomponents/global.css"/>
-
+</head>
 <nav>
 	<div class="nav-wrapper rover-red">
 		<a href="/" class="brand-logo" style="padding-left:10px;"><?php echo getSetting("groupname");?></a>

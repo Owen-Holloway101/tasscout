@@ -7,7 +7,6 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 }
 ?>
 <main>
-
 <?php 
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/ui.php";
 include $_SERVER['DOCUMENT_ROOT']."/core/backend/pagecontent.php";
