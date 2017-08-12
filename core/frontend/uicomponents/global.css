@@ -45,3 +45,12 @@ main {
 .parallax img {
 	display: inherit !important;
 }
+
+.watermark {
+    opacity: 0.5;
+    color: BLACK;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+	font-size: 250%;
+}

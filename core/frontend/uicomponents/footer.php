@@ -14,8 +14,9 @@
         <div class="container">
         © 2017 Scouts Australia Tasmania Branch. Website development by Owen Holloway <a href="https://zeryter.tk">@Zeryter</a>
         </div>
-        <div class="container">
-			WORK IN PROGRESS 
-		</div>
     </div>
 </footer>
+
+<div class="watermark">
+	WORK IN <br> PROGRESS 
+</div>

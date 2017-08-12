@@ -39,7 +39,6 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 		<a href="#!" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 		<ul class="right hide-on-med-and-down">
 			<?php include $_SERVER['DOCUMENT_ROOT']."/core/frontend/uicomponents/links.php"; ?>
-			<li><a class="dropdown-button" href="#!" data-activates="sections">Sections<i class="material-icons right">arrow_drop_down</i></a></li>
 			<li><a class="dropdown-button" href="#!" data-activates="user"><?php 
 			if ($userPermission <= 0) {
 				echo "User";
@@ -52,7 +51,6 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 		<ul class="side-nav" id="mobile">
 			<?php include $_SERVER['DOCUMENT_ROOT']."/core/frontend/uicomponents/links.php"; ?>
 			<li class="divider"></li>
-			<?php include $_SERVER['DOCUMENT_ROOT']."/core/frontend/uicomponents/dropdown.mobile.php"; ?>
 			<?php
             if ($userPermission > 0) {
                 echo "<li><a href=\"/core/user/logout.php\">Logout ".$userName."</a></li>";

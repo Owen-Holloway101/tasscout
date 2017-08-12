@@ -6,16 +6,9 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/backend/settings.php";
 if ($userPermission >= 80) {
 	//Group Name Update
 	updateSetting("groupname",$_POST['groupname']);
-	//Section Updates
-	updateSetting("joeys",isset($_POST['joeys']));
-	updateSetting("cubs",isset($_POST['cubs']));
-	updateSetting("scouts",isset($_POST['scouts']));
-	updateSetting("venturers",isset($_POST['venturers']));
-	updateSetting("rovers",isset($_POST['rovers']));
 	//extra pages
-	updateSetting("calendar",isset($_POST['calendar']));
-	updateSetting("hall_hire",isset($_POST['hall_hire']));
-	updateSetting("resources",isset($_POST['resources']));
+	updateSetting("shows",isset($_POST['shows']));
+	updateSetting("news",isset($_POST['news']));
 	updateSetting("parentsarea",isset($_POST['parentsarea']));
 
 	message_return("Settings Updated","The settings were updated");

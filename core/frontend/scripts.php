@@ -82,7 +82,10 @@ function dummy() {
     }, 
         success: function(data) { 
             location.reload(); 
-        } 
+        } ,
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.responseText);
+        }
     }); 
  
     return false; // avoid to execute the actual submit of the form. 

@@ -8,7 +8,7 @@ function getContent($pageName) {
 
 	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
-	$query = "SELECT page, content FROM pagecontent";
+	$query = "SELECT page, content FROM PAGECONTENT";
 
 	$pagecontent = "null";
 
@@ -43,7 +43,7 @@ function updateContent($pageName, $content) {
 	require $_SERVER['DOCUMENT_ROOT']."/core/backend/db.php";
 
 
-	$stmt = $db->prepare("UPDATE pagecontent SET content=? WHERE page=?");
+	$stmt = $db->prepare("UPDATE PAGECONTENT SET content=? WHERE page=?");
 	echo $db->error;
 	$stmt->bind_param("ss",$content,$pageName);
 	

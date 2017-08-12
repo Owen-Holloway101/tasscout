@@ -47,6 +47,6 @@ include $_SERVER['DOCUMENT_ROOT']."/core/frontend/ui.php";
 
 </main>
 <?php
-include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/footer.php";
+include $_SERVER["DOCUMENT_ROOT"]."/core/frontend/uicomponents/footer.php";
 ?>
 
