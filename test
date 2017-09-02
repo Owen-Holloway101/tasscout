@@ -1,2 +1,4 @@
 #rsync for mobile dev
 rsync -av -e 'ssh -p 22' --progress ./** owen@zeryter.tk:/var/www/wellytest
+
+#comment for test
