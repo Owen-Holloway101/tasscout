@@ -1,2 +1,2 @@
 #rsync for mobile dev
-rsync -av -e 'ssh -p 22' --progress ./** owen@zeryter.tk:/var/www/tasscout
+rsync -av -e 'ssh -p 22' --progress ./** owen@zeryter.xyz:/var/www/tasscout

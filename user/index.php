@@ -34,7 +34,7 @@ include $_SERVER['DOCUMENT_ROOT']."/core/frontend/ui.php";
 						echo "<tr>";
 						echo "<td>".$users[$usercount+1][0]."</td>";
 						echo "<td>".$users[$usercount+1][1]."</td>";
-						echo "<td><a class=\"btn-floating\"><i class=\"material-icons\">edit</i></a></td>";
+						echo "<td><a onClick='edituser(".$users[$usercount+1][0].")' class=\"btn-floating\"><i class=\"material-icons\">edit</i></a></td>";
 						echo "</tr>";
 					}
 					?>
