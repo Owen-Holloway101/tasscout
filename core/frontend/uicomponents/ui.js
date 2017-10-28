@@ -13,12 +13,14 @@ function loadfunction() {
 
   $('.parallax').parallax();
 
-
   $('.modal').modal();
   
-
+  $('select').material_select();
+  
   //Checks for any messages that are waiting for the user
   checkMessage()
+
+  if (typeof settings != 'undefined') settingload();
 }
 
 function checkMessage() {

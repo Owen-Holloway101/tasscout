@@ -35,7 +35,7 @@ $(".brand-logo").text("Venturers");
 	<div class="row container">
 		<div class="editable">
 			<?php
-			echo getContent("index.php");
+			echo getContent("venturers");
 			?>
 		</div>
 		<?php if ($userPermission >= 50) {

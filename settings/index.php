@@ -6,7 +6,12 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 	die();
 }
 ?>
-<body background="/assets/settingsbackdrop.jpeg" onload="settingload()">
+
+<script type="text/javascript">
+var settings=1
+</script>
+
+<body background="/assets/settingsbackdrop.jpeg">
 <main>
 <?php 
 include $_SERVER['DOCUMENT_ROOT']."/core/frontend/ui.php";
