@@ -34,7 +34,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/frontend/scripts.php";
 <link rel="stylesheet" type="text/css" href="/core/frontend/uicomponents/global.css"/>
 
 <nav>
-	<div class="nav-wrapper rover-red">
+	<div class="nav-wrapper scouts-aus-green">
 		<a href="/" class="brand-logo" style="padding-left:10px;"><?php echo getSetting("groupname");?></a>
 		<a href="#!" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 		<ul class="right hide-on-med-and-down">
